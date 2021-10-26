@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BAK Form</title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css" th:href="@{bootstrap.min.css}">
+</head>
+<body class="container">
+        <div><a href="http://localhost:8080/"><button class="btn-sm btn-outline-secondary">Home Page</button></a></div>
+
+        <h1 class="bg-dark border  text-white">Blutalkoholkonzentration mit Widmark-Formel</h1>
+        <form class="border" method = post>
+            <div class="form-group">
+                <label for="geschlechtId"></label>
+                Geschlecht: <select class="form-control"  name="geschlecht" id="geschlechtId">
+                <option>Frau</option>
+                <option>Mann</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gewichtId"></label>
+                Gewicht: <input class="form-control" type="text" name="gewicht" id="gewichtId" placeholder="80.0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bierId"></label>
+                Bier in ml: <input class="form-control" type="text" name="bierMenge" placeholder="500.0" id="bierId">
+            </div>
+            <div class="form-group">
+                <label for="weinId"></label>
+                Wein in ml: <input class="form-control" type="text" name="weinMenge" placeholder="0.0" id="weinId">
+            </div>
+
+            <div class="form-group">
+                <label for="kornId"></label>
+                Korn in ml: <input class="form-control" type="text" name="kornMenge" placeholder="0.0" id="kornId">
+            </div>
+            <div class="form-group">
+                <label for="vodkaId"></label>
+                Vodka in ml: <input class="form-control" type="text" name="vodkaMenge" placeholder="0.0" id="vodkaId">
+            </div>
+
+            <div class="form-group">
+                <label for="whiskyId"></label>
+                Whiskey in ml: <input class="form-control" type="text" name="whiskeyMenge" placeholder="0.0" id="whiskyId">
+            </div>
+
+            <div>
+                <input class="btn btn-primary" type="submit" value="send">
+            </div>
+        </form>
+        <p class="text-center text-muted">&copy; <a class="text-muted" href="https://www.parwand.net">parwand.net</a></p>
+
+</body>
+</html>

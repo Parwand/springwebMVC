@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>sum</title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css" th:href="@{bootstrap.min.css}">
+</head>
+<body class="container">
+ <div><a href="http://localhost:8080/"><button class="btn-sm btn-outline-secondary">Home Page</button></a></div>
+
+ <div>
+      <form method="post">
+        <div>
+            <label for="aId"></label>
+            a: <input type="text" name="a" id="aId" required>
+        </div>
+        <div class="form-group">
+            <label for="bId"></label>
+            b: <input type="text" name="b" id="bId" required>
+        </div>
+        <div class="form-group">
+            <button class="btn-sm btn-outline-secondary" type="submit">add</button>
+        </div>
+      </form>
+
+        <div th:if="${result}">Result: <span th:text="${result}"></span></div>
+    </div>
+    <p class="text-center text-muted">&copy; <a class="text-muted" href="https://www.parwand.net">parwand.net</a></p>
+
+</body>
+</html>
